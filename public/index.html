@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dc2626">
+  <title>Pokédex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="/" aria-label="Pokédex início">
+      <span class="pokebola"><span></span></span>
+      <span>POKÉ<span>DEX</span></span>
+    </a>
+  </header>
+
+  <main class="container">
+    <section class="apresentacao">
+      <p class="sobretitulo">EXPLORE O MUNDO POKÉMON</p>
+      <h1>Encontre seu <span>Pokémon</span></h1>
+      <p class="subtitulo">Pesquise por nome ou número e descubra informações sobre cada criatura.</p>
+    </section>
+
+    <section class="painel">
+      <div class="coluna-detalhe">
+        <div class="status-linha">
+          <span class="status"><i></i> POKÉDEX ONLINE</span>
+          <span id="numero" class="numero">#---</span>
+        </div>
+        <p id="aviso" class="aviso info" role="status" hidden></p>
+        <div class="imagem-area">
+          <div class="circulo"></div>
+          <img id="imagem" alt="" hidden>
+          <span id="placeholder" class="placeholder">?</span>
+        </div>
+        <h2 id="nome" class="nome">Escolha um Pokémon</h2>
+        <ul id="tipos" class="tipos" aria-label="Tipos do Pokémon"></ul>
+
+        <div class="dados">
+          <div><span>ALTURA</span><strong id="altura">--</strong></div>
+          <div><span>PESO</span><strong id="peso">--</strong></div>
+        </div>
+
+        <form id="busca" class="busca">
+          <label class="sr-only" for="termo">Nome ou número do Pokémon</label>
+          <input id="termo" name="termo" placeholder="Ex.: Pikachu ou 25" maxlength="40" required autocomplete="off">
+          <button class="botao-primario" type="submit">Buscar</button>
+        </form>
+
+        <div class="acoes">
+          <button id="anterior" class="botao-secundario" type="button" disabled>← Anterior</button>
+          <button id="aleatorio" class="botao-aleatorio" type="button">✦ Aleatório</button>
+          <button id="proximo" class="botao-secundario" type="button">Próximo →</button>
+        </div>
+      </div>
+
+      <aside class="coluna-lateral">
+        <div class="bloco-titulo">
+          <div><p class="sobretitulo">SUAS DESCOBERTAS</p><h3>Histórico recente</h3></div>
+          <span class="contador" id="contador-historico">0/5</span>
+        </div>
+        <ul id="historico" class="historico">
+          <li class="historico-vazio">Os Pokémon pesquisados aparecerão aqui.</li>
+        </ul>
+        <div class="divisor"></div>
+        <div class="bloco-titulo lista-titulo">
+          <div><p class="sobretitulo">EXPLORE A REGIÃO</p><h3>Pokémon disponíveis</h3></div>
+        </div>
+        <div id="lista-pokemons" class="lista-pokemons">
+          <p class="historico-vazio">Carregando lista...</p>
+        </div>
+        <div class="paginacao">
+          <button id="pagina-anterior" type="button" class="botao-secundario" disabled>←</button>
+          <span id="pagina-atual">Página 1</span>
+          <button id="pagina-proxima" type="button" class="botao-secundario">→</button>
+        </div>
+      </aside>
+    </section>
+    <p class="rodape">Dados fornecidos pela <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">PokéAPI</a>. Projeto acadêmico.</p>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
