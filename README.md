@@ -1,4 +1,4 @@
-# Pokédex UC33
+# Pokédex
 
 Projeto acadêmico desenvolvido com Node.js, TypeScript, Express 5 e JavaScript puro. O servidor consome a PokéAPI e entrega à página somente os dados necessários.
 
